@@ -2,14 +2,18 @@
 #include <vector>
 using namespace std;
 
-int main(){
+int main()
+{
 
     vector<int> v = {1, 2, 3, 4, 5, 6, 7, 8};
     vector<int> v1(v);
 
-    vector<int> ::iterator it = v.begin();
-    cout << *(it) << " ";
-    it++;
+    // vector<int>::iterator it = v.begin();
+    // cout << *(it) << " ";
+    // it++;
+
+    for (int i : v1)
+        cout << i << " ";
 
     return 0;
 }
