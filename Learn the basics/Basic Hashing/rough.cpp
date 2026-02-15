@@ -1,6 +1,6 @@
 #include<iostream>
 #include<map>
-#include<unordered_map>
+#include<map>
 using namespace std;
 
 int main(){
@@ -46,17 +46,17 @@ int main(){
 
 
     //hashing using maps
-    // int n=7;
-    // int arr[] = {1, 2, 3, 1, 3, 2, 12};
+    int n=7;
+    int arr[] = {1, 2, 3, 1, 3, 2, 12};
 
 
-    // unordered_map<int, int> mpp;
-    // for(int i=0; i<n; i++){
-    //     mpp[arr[i]]++;
-    // }
+    map<int, int> mpp;
+    for(int i=0; i<n; i++){
+        mpp[arr[i]]++;
+    }
 
-    // //just for iterating normally
-    // for(auto i : mpp) cout << i.first << "->" << i.second << endl;
+    //just for iterating normally
+    for(auto i : mpp) cout << i.first << "->" << i.second << endl;
 
     // int q=5;
     // while(q--){
