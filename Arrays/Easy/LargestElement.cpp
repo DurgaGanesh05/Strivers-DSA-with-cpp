@@ -1,13 +1,14 @@
 #include<iostream>
+#include<vector>
 using namespace std;
 
 int main(){
     
     int n;
-    // cin >> n;
+    cin >> n;
     
-    int arr[] = {3, 3, 0, 99, -40};
-    // for(int i : arr) cin>>arr[i];
+    vector<int> arr(n);
+    for(int i = 0; i < n; i++) cin >> arr[i];
     
     int max = INT16_MIN;
     for(int i : arr) if(i > max) max = i;
