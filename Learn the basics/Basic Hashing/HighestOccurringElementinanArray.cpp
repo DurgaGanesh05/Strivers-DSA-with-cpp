@@ -5,7 +5,7 @@ using namespace std;
 
 int main(){
     int n=6;
-    int arr[] = {2, 4, 3, 2, 5, 4};
+    int arr[] = {2, 4, 100, 2, 5, 4};
 
     map<int, int>mpp;
     for(int i=0; i<n; i++){
@@ -14,7 +14,7 @@ int main(){
 
     int max=INT32_MIN;
     for(auto i :mpp){
-        if(i.second > max) max =i.first;
+        cout << i.first << "->" << i.second << endl;
     }
     cout<<max;
 }
