@@ -46,8 +46,8 @@ int main(){
 
 
     //hashing using maps
-    int n=7;
-    int arr[] = {1, 2, 3, 1, 3, 2, 12};
+    int n=4;
+    int arr[] = {1,2,3,1};
 
 
     map<int, int> mpp;
