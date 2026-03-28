@@ -6,40 +6,30 @@
 #include <string>
 using namespace std;
 
-bool isPalindrome(string s, int i, int j)
-{
-    // int i=0, j=s.length()-1;
-
-    while (i <= j)
-    {
-        if (s[i] != s[j])
-        {
-            return false;
-        }
-        else
-        {
-            i++, j--;
-        }
-    }
-    return true;
-}
-
 int main()
 {
-    string s = "aguokepatgbnvfqmgmlcupuufxoohdfpgjdmysgvhmvffcnqxjjxqncffvmhvgsymdjgpfdhooxfuupuculmgmqfvnbgtapekouga";
+    string s = "bbbbb";
+    unordered_map<char, int> mpp;
 
-    int i = 0, j = s.length() - 1;
-
-    bool flag=true;
-    while (i < j)
+    int c = 0, i = 0;
+    for (int j = 0; j < s.length(); j++)
     {
-        
+        mpp[s[j]]++;
+        while (mpp[s[j]] >= 2)
+        {
+            mpp[s[i]]--;
+            if (mpp[s[i]] == 0)
+                mpp.erase(s[i]);
+            i++;
+        }
+        c = max(c, j - i + 1);
     }
 
-    cout<<flag;
+    cout<<c;
 
-    return 0;
-}   
+
+    // for(auto i:mpp)cout<<i.first<<"->"<<i.second<<endl;
+}
 
 /*
 
