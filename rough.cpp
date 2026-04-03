@@ -10,16 +10,26 @@ using namespace std;
 
 
 int main(){
-    string s="YazaAay";
-    string ans="";
+    string s = "anagram", t = "nagaram";
+
+    map<char, int> a;
+    map<char, int> b;
 
     for(int i=0; i<s.length(); i++){
-        for(int j=i+1; j<s.length(); j++){
-            if((abs(s[i]-s[j]) == 32) || abs(s[i]-s[j]) == 0) {
-                string temp=s.substr(i, j-i+1);
-                if(temp.length() > ans.length())ans=temp;
-            }
+        a[s[i]]++;
+    }
+    for(int i=0; i<t.length(); i++){
+        b[t[i]]++;
+    }
+
+    
+
+    bool flag;
+    if(s.length() == t.length()){
+        for(int i=0; i<s.length(); i++){
+            flag = (a==b);
         }
     }
-    cout<<ans;
+
+    cout<<flag;
 }
