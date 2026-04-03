@@ -7,25 +7,37 @@
 #include <string>
 using namespace std;
 
-int main()
+// babad
+
+bool isPalindrome(const string& s, int i, int j)
 {
-    string s = "abcdefghijklmnopqrstuvwxyz";
+    
+    while(i<=j){
+        if(s[i] != s[j]) return false;
 
-    unordered_map<char, int> mpp;
-
-    for (int i = 0; i < s.length(); i++)
-    {
-        mpp[s[i]]++;
+        i++, j--;
     }
+    return true;
+}
 
-    bool flag=true;
-    for(auto i:mpp){
-        if(i.second >= 2){
-            flag=false;
-            break;
+string longestPalindrome(const string& s)
+{
+    if (s.empty()) return "";
+    string ans=s.substr(0, 1);
+
+    for(int i=0; i<s.length(); i++){
+        for(int j=i+1; j<s.length(); j++){
+            if(isPalindrome(s, i, j) && (j-i+1) > ans.length()) ans=s.substr(i, j-i+1);
         }
     }
-    cout<<flag;
+    return ans;
+}
+
+int main()
+{
+    string s = "cbbd";
+    cout << longestPalindrome(s);
+    return 0;
 }
 
 /*
@@ -70,9 +82,9 @@ Q1)
         }
     }
 
-    
 
-    Q4)  
+
+    Q4)
     string s = "abcdefghijklmnopqrstuvwxyz";
 
     unordered_map<char, int> mpp;
