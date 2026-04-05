@@ -1,3 +1,154 @@
+
+You are a senior software architect, system designer, and technical writer with expertise in healthcare systems, distributed architectures, and AI-enabled platforms.
+
+Your task is to create a **comprehensive, original, and plagiarism-free technical report** based on the case study below.
+
+IMPORTANT INSTRUCTIONS:
+- The report MUST be 100% original, written in your own words, and avoid any plagiarism.
+- Do NOT copy from known templates, articles, or common architecture writeups.
+- Avoid generic explanations — provide **specific, practical, implementation-oriented insights**.
+- Write in a **professional, structured, and detailed manner**, as if submitting to a hackathon judging panel.
+- Add **justifications for every major design decision**.
+- Include **trade-offs, alternatives considered, and why certain approaches were chosen**.
+- The report should be **deep and detailed**, even if it becomes long (no page limit).
+- Use clear headings, subheadings, and logical flow.
+
+---
+
+### CASE STUDY:
+Your Personalised Case Study
+
+Omnichannel Pharmacy Operations Web Platform
+Design and develop a responsive, mobile-compatible microservices-based web application for a regional pharmacy and health retail group called Medivault Care, operating across urban stores, hospital-adjacent outlets, and franchise counters. The solution must support secure login and role-based access for corporate admins, regional supervisors, pharmacists, and store associates. It should include inventory and batch management, prescription and OTC sales with billing, near-real-time stock visibility and replenishment support, BI reporting dashboards, and agentic AI capabilities such as demand recommendations, anomaly detection for expiry or shrinkage, and conversational querying over operational data. The application must be built using Python technologies and PostgreSQL, expose clear APIs between the UI, service, and data layers, and be suitable for deployment across a hybrid environment where some stores have intermittent connectivity and must continue limited offline operations. The platform should also account for healthcare-adjacent compliance expectations, auditability of access to sensitive transactions, and controlled handling of AI-generated outputs. The initial rollout covers 38 stores across 3 states, with around 220 daily users and peak traffic during evening and weekend hours, but the architecture should be designed to scale to 120+ stores without major redesign. Non-functional requirements must address performance, scalability, security, reliability, observability, data privacy, and compliant AI-assisted development guardrails. The candidate should demonstrate thoughtful handling of store-level syncing, role-based controls, reporting accuracy, and operational resilience while keeping the solution practical for a lean product and engineering team.
+
+Expected Deliverables:
+A concise solution blueprint covering architecture, core modules, data model, API design, deployment approach, security controls, AI features, observability, and scalability strategy for the Medivault Care platform.
+
+Evaluation Criteria:
+Clear microservices architecture with well-defined boundaries between UI, application services, and PostgreSQL-backed data layers
+Appropriate use of Python technologies and API-first design for maintainability and integration
+Robust role-based access control for admins, supervisors, pharmacists, and associates
+Well-designed inventory, billing, replenishment, and reporting workflows aligned to pharmacy operations
+Thoughtful handling of intermittent connectivity and offline/near-offline store synchronization
+Practical agentic AI features with safeguards for recommendations, anomaly detection, and conversational querying
+Strong attention to non-functional requirements including performance, scalability, reliability, observability, and security
+Evidence of compliance-minded design, audit logging, and privacy-aware handling of sensitive operational data
+Clear strategy for testing, deployment, and operational monitoring
+Overall solution quality, realism, and fit for the stated scale and business constraints
+
+---
+
+### OUTPUT REQUIREMENTS:
+
+Structure the report with the following sections (expand each in depth):
+
+1. Executive Summary  
+   - High-level overview of the solution  
+   - Key design principles and goals  
+
+2. System Architecture  
+   - Microservices architecture design  
+   - Component-level breakdown (UI, API gateway, services, database)  
+   - Architecture diagram (describe in text if diagrams not possible)  
+   - Justification for microservices vs monolith  
+
+3. Technology Stack  
+   - Python frameworks (justify choices like FastAPI/Django)  
+   - PostgreSQL usage and schema strategy  
+   - Frontend considerations  
+   - Infrastructure choices  
+
+4. Core Modules Design  
+   - User & Role Management (RBAC)  
+   - Inventory & Batch Management  
+   - Billing & Sales (Prescription + OTC)  
+   - Replenishment & Stock Visibility  
+   - Reporting & BI dashboards  
+
+5. Data Model Design  
+   - Key entities and relationships  
+   - Handling batch tracking, expiry, and audit logs  
+   - Multi-store data strategy  
+
+6. API Design  
+   - API-first approach  
+   - Example endpoints (with request/response structure)  
+   - Inter-service communication  
+
+7. Offline-First & Sync Strategy  
+   - Handling intermittent connectivity  
+   - Local store operations in offline mode  
+   - Conflict resolution and syncing approach  
+
+8. AI Capabilities (Agentic AI)  
+   - Demand forecasting approach  
+   - Anomaly detection (expiry, shrinkage)  
+   - Conversational querying system  
+   - Guardrails for AI outputs (very important)  
+
+9. Security & Compliance  
+   - Role-based access control (detailed)  
+   - Audit logging  
+   - Data privacy and protection  
+   - Handling sensitive healthcare-related data  
+
+10. Non-Functional Requirements  
+   - Performance  
+   - Scalability (38 → 120+ stores)  
+   - Reliability  
+   - Observability (logging, tracing, monitoring)  
+
+11. Deployment Strategy  
+   - Hybrid deployment model  
+   - Cloud + edge/store setup  
+   - CI/CD pipeline  
+
+12. Testing Strategy  
+   - Unit, integration, and system testing  
+   - Data validation and consistency checks  
+
+13. Monitoring & Operations  
+   - Alerts, dashboards, logging  
+   - Incident handling  
+
+14. Trade-offs & Design Decisions  
+   - Alternatives considered  
+   - Why chosen approach is better  
+
+15. Scalability Roadmap  
+   - Future improvements  
+   - Expansion considerations  
+
+16. Conclusion  
+   - Final summary of system strengths  
+
+---
+
+### ADDITIONAL REQUIREMENTS:
+- Use **clear, precise, and technical language**
+- Avoid unnecessary fluff — focus on **depth and clarity**
+- Include **real-world practicality** (cost, team size, constraints)
+- Ensure the solution is feasible for a **lean engineering team**
+- Maintain **consistency across all sections**
+
+---
+
+Generate the final answer as a **polished, submission-ready technical report**.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Q1)
     string s="abcde";
 
@@ -59,7 +210,3 @@ Q1)
         }
     }
     cout<<flag;
-
-
-
-

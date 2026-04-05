@@ -7,40 +7,25 @@
 #include <string>
 using namespace std;
 
+void getPerms(string &s, int idx){
+
+    if(idx == s.length()){
+        for(int i=0; i<s.length(); i++)cout<<s[i]<<" ";
+    }
+    cout<<endl;
+
+    for(int i=idx; i<s.length(); i++){
+        swap(s[i], s[idx]);
+        getPerms(s, idx+1);
+        
+        swap(s[i], s[idx]);
+    }
+}
+
 int main()
 {
-    string s = "cbaebabacd", p = "abc";
+    string s = "eidbaooo";
 
-    vector<int> ph(26, 0);
-    vector<int> sh(26, 0);
-
-    vector<int> ans;
-
-    for (int i = 0; i < p.length(); i++)
-    {
-        ph[p[i] - 'a']++;
-    }
-    int i=0;
-    for (int j = 0; j < s.length(); j++)
-    {
-        sh[s[j] - 'a']++;
-
-        if ((j - i + 1) > p.length())
-        {
-            sh[s[i]-'a']--;
-            i++;
-        }
-
-        if ((j - i + 1) == p.length() && ph == sh)
-            ans.push_back(i);
-    }
-    for(int i:ans)cout<<i<<" ";
-
-    // sh.push_back();
-    // sh[0]=1;
-    // sh[2]=1;
-    // sh[3]=3;
-    // sh[4]=1;
-    // sh[5]=4;
-    // for(int i:sh)cout<<i<<" ";
+    getPerms(s, 0);
+    
 }
