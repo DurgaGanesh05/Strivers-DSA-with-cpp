@@ -12,6 +12,7 @@ void getPerms(string &s, int idx){
     if(idx == s.length()){
         for(int i=0; i<s.length(); i++)cout<<s[i]<<" ";
     }
+
     cout<<endl;
 
     for(int i=idx; i<s.length(); i++){
