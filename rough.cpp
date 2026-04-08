@@ -11,8 +11,5 @@ using namespace std;
 
 int main()
 {
-    string s = "abc";
-
-    getPerms(s, 0);
     
 }
