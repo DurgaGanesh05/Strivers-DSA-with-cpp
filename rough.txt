@@ -1,1 +1,8 @@
 
+we will do binary search and find t
+if(mid == t){
+   if(mid+1 == t) push mid and mid+1;
+   else if(mid-1 == t) push mid and mid-1
+}
+
+if(t not found in array) at last after while loop push -1, -1 in array and return
